@@ -1,0 +1,15 @@
+section {
+	min-height: 100vh;
+	height: 100%;
+	background-size: cover;
+	background-repeat: no-repeat;
+	background-attachment: fixed;
+	overflow-x: hidden;
+}
+
+@media (max-width: 768px) {
+	section {
+		padding: 94px;
+		height: auto;
+	}
+}

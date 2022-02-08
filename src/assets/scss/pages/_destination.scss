@@ -1,0 +1,137 @@
+.destination {
+	background-image: url(../../img/destination/background-destination-desktop.jpg);
+	padding: 212px 0 118px 165px;
+
+	.nav-pills {
+		margin-bottom: 37px;
+		.nav-link {
+			background-color: transparent;
+			border: none;
+			font-size: 16px;
+			line-height: 19px;
+			letter-spacing: 2.7px;
+			color: $primary;
+			padding: 0;
+			margin: 0 17.5px;
+			border-radius: 0;
+
+			&:after {
+				display: block;
+				content: "";
+				border-bottom: 3px solid #ffffff;
+				transform: scaleX(0);
+				transition: transform 250ms ease-in-out;
+				margin-top: 12px;
+			}
+			&:hover:after {
+				transform: scaleX(1);
+			}
+			&:first-child {
+				margin-left: 0;
+			}
+			&:last-child {
+				margin-right: 0;
+			}
+			&.active {
+				color: #ffffff;
+
+				&:after {
+					content: "";
+					border-bottom: 3px solid #ffffff;
+					display: block;
+					transform: scaleX(1);
+				}
+			}
+		}
+	}
+	img {
+		margin-top: -71px;
+	}
+	.subheading-2 {
+		margin-bottom: 12px;
+	}
+	h5 {
+		margin-bottom: 64px;
+
+		b {
+			opacity: 0.25;
+		}
+	}
+	h2 {
+		margin-bottom: 12px;
+	}
+	p {
+		margin-bottom: 54px;
+	}
+	.card {
+		width: 445px;
+
+		&-footer {
+			padding: 28px 0 0 0;
+			border-top: 1px solid #383b4b;
+		}
+	}
+}
+
+@media (max-width: 992px) {
+	.destination {
+		background-image: url(../../img/destination/background-destination-tablet.jpg);
+		padding: 136px 0 62px 0;
+
+		h5 {
+			margin: 0 38.5px 60px;
+		}
+		h2 {
+			margin-bottom: 8px;
+		}
+		p {
+			margin-bottom: 49px;
+		}
+		img {
+			width: 300px;
+			height: 300px;
+			margin: 0 auto 119px;
+		}
+		.card {
+			width: 573px;
+			margin: auto;
+			text-align: center;
+		}
+		.nav-pills {
+			justify-content: center;
+			margin: 0;
+			position: absolute;
+			width: 100vw;
+			top: 35em;
+		}
+	}
+}
+@media (max-width: 576px) {
+	.destination {
+		background-image: url(../../img/destination/background-destination-mobile.jpg);
+		padding: 88px 0 81px 0;
+
+		h5 {
+			text-align: center;
+			margin: 0 0 32px 0;
+		}
+		img {
+			width: 170px;
+			height: 170px;
+		}
+		.card {
+			width: auto;
+			padding: 0 24px;
+		}
+		.nav-pills {
+			top: 23em;
+
+			.nav-link {
+				letter-spacing: 2.3625px;
+				font-size: 14px;
+				line-height: 17px;
+				margin: 0 13px;
+			}
+		}
+	}
+}

@@ -1,0 +1,131 @@
+@import url("https://fonts.googleapis.com/css2?family=Barlow&family=Barlow+Condensed:wght@400;700&family=Bellefair&display=swap");
+
+a {
+	text-decoration: none;
+}
+h1 {
+	font-family: "Bellefair", serif;
+	font-size: 150px;
+	line-height: 172px;
+	text-transform: uppercase;
+}
+h2 {
+	font-family: "Bellefair", serif;
+	font-size: 100px;
+	line-height: 115px;
+	text-transform: uppercase;
+}
+h3 {
+	font-family: "Bellefair", serif;
+	font-size: 56px;
+	line-height: 64px;
+	text-transform: uppercase;
+}
+h4 {
+	font-family: "Bellefair", serif;
+	font-size: 32px;
+	line-height: 37px;
+	text-transform: uppercase;
+}
+h5 {
+	font-family: "Barlow Condensed", sans-serif;
+	letter-spacing: 4.725px;
+	font-size: 28px;
+	line-height: 34px;
+}
+.subheading-1 {
+	font-family: "Bellefair", serif;
+	font-size: 28px;
+	line-height: 32px;
+	text-transform: uppercase;
+}
+.subheading-2 {
+	font-family: "Barlow Condensed", serif;
+	font-size: 14px;
+	line-height: 17px;
+	text-transform: uppercase;
+}
+p {
+	font-family: "Barlow", sans-serif;
+	font-size: 18px;
+	line-height: 32px;
+}
+@each $name, $color in $colors {
+	.text-#{$name} {
+		color: $color !important;
+	}
+}
+
+@media (max-width: 768px) {
+	h1 {
+		font-size: 150px;
+		line-height: 150px;
+	}
+	h2 {
+		font-size: 80px;
+		line-height: 92px;
+	}
+	h3 {
+		font-size: 40px;
+		line-height: 46px;
+	}
+	h4 {
+		font-size: 24px;
+		line-height: 28px;
+	}
+	h5 {
+		font-size: 20px;
+		line-height: 24px;
+		letter-spacing: 3.375px;
+	}
+	.subheading-1 {
+		font-size: 28px;
+		line-height: 32px;
+	}
+	.subheading-2 {
+		font-size: 14px;
+		line-height: 17px;
+		letter-spacing: 2.3625px;
+	}
+	p {
+		font-size: 16px;
+		line-height: 28px;
+	}
+}
+
+@media (max-width: 576px) {
+	h1 {
+		font-size: 80px;
+		line-height: 100px;
+	}
+	h2 {
+		font-size: 56px;
+		line-height: 64px;
+	}
+	h3 {
+		font-size: 24px;
+		line-height: 28px;
+	}
+	h4 {
+		font-size: 16px;
+		line-height: 18px;
+	}
+	h5 {
+		font-size: 16px;
+		line-height: 19px;
+		letter-spacing: 2.7px;
+	}
+	.subheading-1 {
+		font-size: 28px;
+		line-height: 32px;
+	}
+	.subheading-2 {
+		font-size: 14px;
+		line-height: 17px;
+		letter-spacing: 2.3625px;
+	}
+	p {
+		font-size: 15px;
+		line-height: 25px;
+	}
+}

@@ -1,0 +1,97 @@
+.home {
+	background-image: url(../../img/home/background-home-desktop.jpg);
+	padding-bottom: 61px;
+	padding-top: 136px;
+	display: flex;
+	align-items: end;
+
+	.btn {
+		width: 274px;
+		height: 274px;
+		background: #ffffff;
+		border-radius: 50%;
+		font-size: 32px;
+		line-height: 37px;
+		letter-spacing: 2px;
+		font-family: $bellefair;
+		border: none;
+		outline: 1px solid transparent;
+		display: flex;
+		align-items: center;
+		justify-content: center;
+		transition: outline 0.5s;
+
+		&:hover {
+			outline: 88px solid rgba($color: #ffffff, $alpha: 0.1);
+			transition: outline 0.5s;
+		}
+		&:focus {
+			box-shadow: none;
+		}
+	}
+}
+
+@media (max-width: 992px) {
+	.home {
+		padding: 202px 0 90px 0;
+		text-align: center;
+		background-image: url(../../img/home/background-home-tablet.jpg);
+
+		.card {
+			max-width: 450px;
+			margin: auto;
+		}
+		.btn {
+			width: 242px;
+			height: 242px;
+			margin: 156px auto 0 auto;
+			animation: rippleTablet 2s linear infinite;
+		}
+	}
+}
+
+@media (max-width: 576px) {
+	.home {
+		padding: 112px 0 48px 0;
+		background-image: url(../../img/home/background-home-mobile.jpg);
+		background-size: cover;
+		background-repeat: no-repeat;
+
+		.btn {
+			width: 150px;
+			height: 150px;
+			margin: 81px auto 0 auto;
+			font-size: 20px;
+			line-height: 23px;
+			letter-spacing: 1.25px;
+			animation: rippleMobile 2s linear infinite;
+		}
+	}
+}
+
+@keyframes ripple {
+	0% {
+		outline: 1px solid rgba(#ffffff, 0.2);
+	}
+	100% {
+		outline: 88px solid rgba(#ffffff, 0);
+	}
+}
+
+@keyframes rippleTablet {
+	0% {
+		outline: 1px solid rgba(#ffffff, 0.2);
+	}
+	100% {
+		outline: 70px solid rgba(#ffffff, 0);
+	}
+}
+
+@keyframes rippleMobile {
+	0% {
+		outline: 1px solid rgba(#ffffff, 0.2);
+	}
+	100% {
+		outline: 40px solid rgba(#ffffff, 0);
+	}
+}

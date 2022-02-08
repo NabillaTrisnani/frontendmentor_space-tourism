@@ -1,0 +1,167 @@
+.navbar {
+	position: absolute;
+	width: 100%;
+	top: 40px;
+	z-index: 9;
+	padding: 0;
+
+	&-brand {
+		margin: 0 64px 0 55px;
+		padding: 0;
+	}
+	&-toggler {
+		border: none;
+		padding: 0;
+	}
+	.navbar-nav {
+		background: rgba(255, 255, 255, 0.04);
+		backdrop-filter: blur(10px);
+		padding: 0 165px 0 123px;
+
+		.nav-link {
+			font-size: 16px;
+			line-height: 19px;
+			letter-spacing: 2.7px;
+			color: #ffffff !important;
+			font-family: $barlow-condensed;
+			padding: 39px 0 0;
+			margin: 0 24px;
+
+			b {
+				margin-right: 11px;
+			}
+			&:after {
+				display: block;
+				content: "";
+				border-bottom: 3px solid #ffffff;
+				transform: scaleX(0);
+				transition: transform 250ms ease-in-out;
+				margin-top: 39px;
+			}
+			&:hover:after {
+				transform: scaleX(1);
+			}
+			&.active:after {
+				display: block;
+				content: "";
+				border-bottom: 3px solid #ffffff;
+				transform: scaleY(1);
+			}
+		}
+		&::before {
+			content: "";
+			width: 29vw;
+			background-color: #ffffff;
+			position: absolute;
+			left: -26.8vw;
+			top: 50%;
+			z-index: 1;
+			height: 1px;
+			opacity: 0.25;
+		}
+	}
+}
+.offcanvas {
+	width: auto;
+	position: initial !important;
+}
+
+@media (max-width: 768px) {
+	.navbar {
+		top: 0;
+
+		&-brand {
+			margin: 0 0 0 39px;
+		}
+		.navbar-nav {
+			padding: 0 48px;
+
+			&::before {
+				display: none;
+			}
+
+			.nav-link {
+				font-size: 14px;
+				line-height: 17px;
+				letter-spacing: 2.3625px;
+				padding: 37px 0 0;
+				margin: 0 18.5px;
+
+				&:after {
+					margin-top: 37px;
+				}
+				b {
+					display: none;
+				}
+			}
+		}
+	}
+}
+
+@media (max-width: 576px) {
+	.navbar {
+		padding: 24px 24px 0 24px !important;
+
+		&-brand {
+			margin: 0;
+
+			img {
+				width: 40px;
+				height: 40px;
+			}
+		}
+		.navbar-nav {
+			background: none;
+			backdrop-filter: unset;
+			padding: 0;
+
+			.nav-link {
+				margin: 0;
+				padding: 16px 0;
+				font-size: 16px;
+				line-height: 19px;
+				letter-spacing: 2.7px;
+
+				b {
+					display: initial;
+				}
+				&::after,
+				&.active::after {
+					display: none;
+				}
+			}
+		}
+	}
+	.offcanvas {
+		background: rgba(255, 255, 255, 0.04);
+		backdrop-filter: blur(10px);
+		position: fixed !important;
+
+		&-end {
+			width: 254px;
+		}
+		&-header {
+			background: none;
+			padding: 33px 26px;
+
+			.btn-close {
+				background: none;
+				padding: 0;
+				border: none;
+				margin: 0;
+				width: auto;
+				height: auto;
+
+				&:focus {
+					box-shadow: none;
+				}
+			}
+		}
+		&-body {
+			padding: calc(64px - 33px - 16px) 32px;
+		}
+		&-backdrop {
+			background: none;
+		}
+	}
+}
